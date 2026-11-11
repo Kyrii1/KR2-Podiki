@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="ru" data-bs-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Страница товара интернет-магазина Podiki.">
+  <title>Товар — Podiki</title>
+  <link rel="stylesheet" href="vendor/bootstrap/css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/custom.css">
+</head>
+<body>
+  <nav class="navbar navbar-expand-lg sticky-top">
+    <div class="container">
+      <a class="navbar-brand" href="index.html">
+        <span class="brand-mark">P</span>
+        Podiki
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#podikiNav"
+              aria-controls="podikiNav" aria-expanded="false" aria-label="Переключить навигацию">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="podikiNav">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item"><a class="nav-link" href="index.html">Главная</a></li>
+          <li class="nav-item"><a class="nav-link" href="catalog.html">Каталог</a></li>
+          <li class="nav-item"><a class="nav-link" href="contacts.html">Контакты</a></li>
+        </ul>
+        <a href="order.html" class="btn btn-outline-primary">Оставить заявку</a>
+      </div>
+    </div>
+  </nav>
+
+  <main class="py-4">
+    <div class="container">
+      <div class="row g-4 mb-4">
+        <!-- Изображение товара -->
+        <div class="col-12 col-lg-5">
+          <div class="card border-0 shadow-sm overflow-hidden">
+            <img id="productImage" src="images/vaporesso-xros-nano-green.webp" class="card-img-top" alt="Vaporesso Xros Nano Green">
+            <div class="card-footer bg-transparent border-0 p-3 text-center">
+              <a href="catalog.html" class="btn btn-outline-secondary btn-sm">&larr; Назад в каталог</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Информация о товаре -->
+        <div class="col-12 col-lg-7">
+          <div class="d-flex justify-content-between align-items-start mb-3">
+            <div>
+              <h1 id="productTitle" class="h3 fw-bold mb-0">Vaporesso Xros Nano Green</h1>
+            </div>
+            <div class="ms-auto">
+              <span id="productBadge" class="badge bg-pink">Новинка</span>
+            </div>
+          </div>
+          <p id="productPrice" class="h4 fw-bold mb-4">3 490 ₽</p>
+
+          <div class="mb-4">
+            <label class="form-label fw-semibold">Количество</label>
+            <div class="input-group" style="max-width: 170px;">
+              <span class="input-group-text">шт.</span>
+              <input type="number" id="productQty" class="form-control" value="1" min="1" max="10">
+            </div>
+          </div>
+
+          <div class="d-grid gap-2 d-sm-flex justify-content-sm-start mb-4">
+            <button id="orderFromProduct" class="btn btn-primary px-4">Оформить заявку</button>
+            <a href="order.html?model=vaporesso-xros-nano-green" class="btn btn-outline-secondary px-4">Заказать позже</a>
+          </div>
+
+          <!-- Модальное окно быстрого заказа -->
+          <button class="btn btn-link text-decoration-none p-0 text-muted fw-semibold" data-bs-toggle="modal" data-bs-target="#quickOrderModal">
+            Оформить заказ в один клик
+          </button>
+        </div>
+      </div>
+
+      <div class="row g-4">
+        <!-- Описание -->
+        <div class="col-12 col-lg-8">
+          <div class="card border-0 shadow-sm mb-4">
+            <div class="card-body">
+              <h3 class="h5 fw-bold mb-3">Описание</h3>
+              <p id="productDesc">Компактная под-система для ежедневного парения. Устройство сочетает в себе эргономичный дизайн, долгую автономность и удобную заправку. Идеальный выбор как для новичков, так и для опытных пользователей.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Характеристики (аккордеон) -->
+        <div class="col-12 col-lg-4">
+          <div class="card border-0 shadow-sm">
+            <div class="card-header bg-transparent border-0 fw-semibold">
+              Характеристики
+            </div>
+            <div class="card-body p-0">
+              <div class="accordion accordion-flush" id="specAccordion">
+                <div class="accordion-item border-0">
+                  <h2 class="accordion-header">
+                    <button class="accordion-button collapsed fw-semibold" type="button" data-bs-toggle="collapse" data-bs-target="#specBody" aria-expanded="false" aria-controls="specBody">
+                      Основные характеристики
+                    </button>
+                  </h2>
+                  <div id="specBody" class="accordion-collapse collapse" data-bs-parent="#specAccordion">
+                    <div class="accordion-body p-3">
+                      <table class="table table-sm table-borderless mb-0">
+                        <tbody>
+                          <tr>
+                            <td class="fw-semibold">Тип устройства</td>
+                            <td class="text-end">Под-система</td>
+                          </tr>
+                          <tr>
+                            <td class="fw-semibold">Ёмкость картриджа</td>
+                            <td class="text-end">2 мл</td>
+                          </tr>
+                          <tr>
+                            <td class="fw-semibold">Ёмкость аккумулятора</td>
+                            <td class="text-end">1000 мА·ч</td>
+                          </tr>
+                          <tr>
+                            <td class="fw-semibold">Мощность</td>
+                            <td class="text-end">До 16 Вт</td>
+                          </tr>
+                          <tr>
+                            <td class="fw-semibold">Зарядка</td>
+                            <td class="text-end">USB-C</td>
+                          </tr>
+                          <tr>
+                            <td class="fw-semibold">Цвет</td>
+                            <td class="text-end">Зелёный</td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer class="py-4 mt-auto">
+    <div class="container text-center">
+      <p class="mb-0 text-muted small">&copy; 2026 Интернет-магазин Podiki. Учебный проект.</p>
+    </div>
+  </footer>
+
+  <!-- Модальное окно быстрого заказа -->
+  <div class="modal fade" id="quickOrderModal" tabindex="-1" aria-labelledby="quickOrderModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content border-0 shadow-lg">
+        <div class="modal-header border-0">
+          <h5 class="modal-title fw-bold" id="quickOrderModalLabel">Быстрый заказ</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Закрыть"></button>
+        </div>
+        <div class="modal-body">
+          <p class="mb-3">Оформите заявку на товар <strong id="modalProductName">Vaporesso Xros Nano Green</strong>.</p>
+          <div class="mb-3">
+            <label class="form-label">Ваше имя</label>
+            <input type="text" class="form-control" placeholder="Иван Иванов" required>
+          </div>
+          <div class="mb-3">
+            <label class="form-label">Телефон</label>
+            <input type="tel" class="form-control" placeholder="+7 900 000-00-00" required>
+          </div>
+        </div>
+        <div class="modal-footer border-0">
+          <button type="button" class="btn btn-outline-secondary" data-bs-dismiss="modal">Отмена</button>
+          <button type="button" class="btn btn-primary">Отправить заявку</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="js/product.js"></script>
+</body>
+</html>

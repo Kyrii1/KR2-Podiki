@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="ru" data-bs-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Интернет-магазин вейп-продукции Podiki. Под-системы и одноразовые вейпы с быстрой доставкой.">
+  <title>Podiki — вейп продукция</title>
+  <link rel="stylesheet" href="vendor/bootstrap/css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/custom.css">
+</head>
+<body>
+  <!-- Навигация -->
+  <nav class="navbar navbar-expand-lg sticky-top">
+    <div class="container">
+      <a class="navbar-brand" href="index.html">
+        <span class="brand-mark">P</span>
+        Podiki
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#podikiNav"
+              aria-controls="podikiNav" aria-expanded="false" aria-label="Переключить навигацию">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="podikiNav">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item"><a class="nav-link active" href="index.html">Главная</a></li>
+          <li class="nav-item"><a class="nav-link" href="catalog.html">Каталог</a></li>
+          <li class="nav-item"><a class="nav-link" href="contacts.html">Контакты</a></li>
+        </ul>
+        <a href="order.html" class="btn btn-outline-primary">Оставить заявку</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero-блок -->
+  <section class="hero">
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col-lg-8 text-center">
+          <h1 class="display-4 fw-bold mb-4">Вейп-устройства<br>для комфортного парения</h1>
+          <p class="lead">Под-системы и одноразовые вейпы от проверенных брендов с официальной гарантией и быстрой доставкой.</p>
+          <div class="d-flex flex-column flex-sm-row gap-2 justify-content-center">
+            <a href="catalog.html" class="btn btn-primary btn-lg px-5">Перейти в каталог</a>
+            <a href="#popular" class="btn btn-outline-secondary btn-lg px-5">Популярные модели</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Популярные товары -->
+  <section class="py-5 bg-light" id="popular">
+    <div class="container">
+      <div class="row justify-content-between align-items-center mb-4">
+        <div class="col-auto">
+          <h2 class="section-title">Популярные модели</h2>
+        </div>
+        <div class="col-auto text-end">
+          <a href="catalog.html" class="btn btn-sm btn-outline-primary">Весь каталог →</a>
+        </div>
+      </div>
+      <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
+        <div class="col">
+          <div class="card h-100">
+            <img src="images/vaporesso-xros-nano-green.webp" class="card-img-top" alt="Vaporesso Xros Nano Green">
+            <div class="card-body">
+              <span class="badge bg-pink mb-2">Новинка</span>
+              <h5 class="card-title">Vaporesso Xros Nano Green</h5>
+              <p class="card-text">Компактная под-система для ежедневного парения с регулируемым обдувом.</p>
+            </div>
+            <div class="card-footer">
+              <div class="d-flex justify-content-between align-items-center">
+                <span class="fw-bold">3 490 ₽</span>
+                <a href="product.html?vaporesso-xros-nano-green" class="btn btn-primary btn-sm">Подробнее</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card h-100">
+            <img src="images/geekvape-aegis-boost-iii-teal.webp" class="card-img-top" alt="Geekvape Aegis Boost III Teal">
+            <div class="card-body">
+              <span class="badge bg-warning text-dark mb-2">Хит продаж</span>
+              <h5 class="card-title">Geekvape Aegis Boost III Teal</h5>
+              <p class="card-text">Ударопрочная под-система для активного парения с долгой автономностью.</p>
+            </div>
+            <div class="card-footer">
+              <div class="d-flex justify-content-between align-items-center">
+                <span class="fw-bold">4 990 ₽</span>
+                <a href="product.html?geekvape-aegis-boost-iii-teal" class="btn btn-primary btn-sm">Подробнее</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card h-100">
+            <img src="images/pafos-8000-exotic.webp" class="card-img-top" alt="Pafos 8000 Exotic">
+            <div class="card-body">
+              <span class="badge bg-success mb-2">Распродажа</span>
+              <h5 class="card-title">Pafos 8000 Exotic</h5>
+              <p class="card-text">Одноразовый вейп с экзотическим вкусом и до 8000 тяг без подзарядки.</p>
+            </div>
+            <div class="card-footer">
+              <div class="d-flex justify-content-between align-items-center">
+                <span class="fw-bold">990 ₽</span>
+                <a href="product.html?pafos-8000-exotic" class="btn btn-primary btn-sm">Подробнее</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Аккордеон FAQ -->
+  <section class="py-5">
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col-lg-8">
+          <div class="accordion" id="faqAccordion">
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="faqOne">
+                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                  Как оформить заказ?
+                </button>
+              </h2>
+              <div id="collapseOne" class="accordion-collapse collapse show" data-bs-parent="#faqAccordion">
+                <div class="accordion-body">Перейдите на страницу <a href="order.html" class="alert-link">оформления заявки</a>, укажите контактные данные, выберите модель и отправьте форму. Наш менеджер свяжется с вами в ближайшее время.</div>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="faqTwo">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                  Есть ли гарантия на устройства?
+                </button>
+              </h2>
+              <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                <div class="accordion-body">Да, на всю продукцию предоставляется гарантия производителя. Сроки зависят от бренда и модели устройства.</div>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="faqThree">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                  Как связаться с поддержкой?
+                </button>
+              </h2>
+              <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                <div class="accordion-body">Напишите нам на <a href="mailto:podiki@podiki.com" class="alert-link">podiki@podiki.com</a> или позвоните по телефону <a href="tel:+79000000000" class="alert-link">+7 900 000-00-00</a>.</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="py-4 mt-auto">
+    <div class="container text-center">
+      <p class="mb-0 text-muted small">&copy; 2026 Интернет-магазин Podiki. Учебный проект.</p>
+    </div>
+  </footer>
+
+  <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

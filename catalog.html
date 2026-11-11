@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="ru" data-bs-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Каталог вейп-продукции Podiki. Под-системы и одноразовые вейпы.">
+  <title>Каталог — Podiki</title>
+  <link rel="stylesheet" href="vendor/bootstrap/css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/custom.css">
+</head>
+<body>
+  <nav class="navbar navbar-expand-lg sticky-top">
+    <div class="container">
+      <a class="navbar-brand" href="index.html">
+        <span class="brand-mark">P</span>
+        Podiki
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#podikiNav"
+              aria-controls="podikiNav" aria-expanded="false" aria-label="Переключить навигацию">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="podikiNav">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item"><a class="nav-link" href="index.html">Главная</a></li>
+          <li class="nav-item"><a class="nav-link active" href="catalog.html">Каталог</a></li>
+          <li class="nav-item"><a class="nav-link" href="contacts.html">Контакты</a></li>
+        </ul>
+        <a href="order.html" class="btn btn-outline-primary">Оставить заявку</a>
+      </div>
+    </div>
+  </nav>
+
+  <main class="py-4">
+    <div class="container">
+      <nav class="mb-4" aria-label="Хлебные крошки">
+        <ol class="breadcrumb">
+          <li class="breadcrumb-item"><a href="index.html">Главная</a></li>
+          <li class="breadcrumb-item active">Каталог</li>
+        </ol>
+      </nav>
+
+      <div class="row g-4">
+        <!-- Боковая колонка с фильтрами -->
+        <div class="col-12 col-lg-3">
+          <div class="card border-0 shadow-sm sticky-top">
+            <div class="card-body">
+              <h5 class="card-title fw-bold mb-3">Фильтр по категории</h5>
+              <div class="mb-3">
+                <label class="form-label">Категория</label>
+                <div class="input-group">
+                  <span class="input-group-text">Категория</span>
+                  <select class="form-select" id="categoryFilter">
+                    <option value="all">Все категории</option>
+                    <option value="pod">Под-системы</option>
+                    <option value="disposable">Одноразовые вейпы</option>
+                  </select>
+                </div>
+              </div>
+              <div class="mb-3">
+                <label class="form-label">Цена</label>
+                <div class="input-group">
+                  <span class="input-group-text">Цена</span>
+                  <select class="form-select" id="priceFilter">
+                    <option value="all">Любая цена</option>
+                    <option value="low">До 2 000 ₽</option>
+                    <option value="mid">2 000–4 000 ₽</option>
+                    <option value="high">От 4 000 ₽</option>
+                  </select>
+                </div>
+              </div>
+              <button class="btn btn-outline-primary w-100" id="resetFilter">Сбросить фильтры</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Товары -->
+        <div class="col-12 col-lg-9">
+          <div class="d-flex justify-content-between align-items-center mb-4">
+            <div>
+              <h2 class="fw-bold mb-1">Модели</h2>
+              <p class="text-muted small mb-0">Выберите подходящую под-систему или одноразовый вейп.</p>
+            </div>
+            <span class="badge bg-secondary" id="productsCount">10 товаров</span>
+          </div>
+
+          <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 g-4" id="productGrid">
+            <div class="col" data-category="pod" data-price="mid">
+              <div class="card h-100">
+                <img src="images/geekvape-aegis-boost-iii-teal.webp" class="card-img-top" alt="Geekvape Aegis Boost III Teal">
+                <div class="card-body d-flex flex-column">
+                  <span class="badge bg-warning text-dark mb-2">Хит продаж</span>
+                  <h5 class="card-title">Geekvape Aegis Boost III Teal</h5>
+                  <p class="card-text flex-grow-1">Ударопрочная под-система для активного парения.</p>
+                </div>
+                <div class="card-footer">
+                  <div class="d-flex justify-content-between align-items-center">
+                    <span class="fw-bold">4 990 ₽</span>
+                    <a href="product.html?geekvape-aegis-boost-iii-teal" class="btn btn-primary btn-sm">Подробнее</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col" data-category="disposable" data-price="low">
+              <div class="card h-100">
+                <img src="images/pafos-20000-green-large.webp" class="card-img-top" alt="Pafos 20000 Green Large">
+                <div class="card-body d-flex flex-column">
+                  <span class="badge bg-success mb-2">Распродажа</span>
+                  <h5 class="card-title">Pafos 20000 Green Large</h5>
+                  <p class="card-text flex-grow-1">Компактный одноразовый вейп на 20000 тяг.</p>
+                </div>
+                <div class="card-footer">
+                  <div class="d-flex justify-content-between align-items-center">
+                    <span class="fw-bold">1 690 ₽</span>
+                    <a href="product.html?pafos-20000-green-large" class="btn btn-primary btn-sm">Подробнее</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col" data-category="disposable" data-price="low">
+              <div class="card h-100">
+                <img src="images/pafos-20000-pink.webp" class="card-img-top" alt="Pafos 20000 Pink">
+                <div class="card-body d-flex flex-column">
+                  <span class="badge bg-pink mb-2">Новинка</span>
+                  <h5 class="card-title">Pafos 20000 Pink</h5>
+                  <p class="card-text flex-grow-1">Лёгкий вейп с ягодным вкусом и долгой работой.</p>
+                </div>
+                <div class="card-footer">
+                  <div class="d-flex justify-content-between align-items-center">
+                    <span class="fw-bold">1 690 ₽</span>
+                    <a href="product.html?pafos-20000-pink" class="btn btn-primary btn-sm">Подробнее</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col" data-category="disposable" data-price="low">
+              <div class="card h-100">
+                <img src="images/pafos-8000-exotic.webp" class="card-img-top" alt="Pafos 8000 Exotic">
+                <div class="card-body d-flex flex-column">
+                  <span class="badge bg-success mb-2">Распродажа</span>
+                  <h5 class="card-title">Pafos 8000 Exotic</h5>
+                  <p class="card-text flex-grow-1">Экзотический вкус и до 8000 тяг без подзарядки.</p>
+                </div>
+                <div class="card-footer">
+                  <div class="d-flex justify-content-between align-items-center">
+                    <span class="fw-bold">990 ₽</span>
+                    <a href="product.html?pafos-8000-exotic" class="btn btn-primary btn-sm">Подробнее</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col" data-category="pod" data-price="mid">
+              <div class="card h-100">
+                <img src="images/vape-pod-01.webp" class="card-img-top" alt="Vape Pod 01">
+                <div class="card-body d-flex flex-column">
+                  <span class="badge bg-secondary mb-2">В наличии</span>
+                  <h5 class="card-title">Vape Pod 01</h5>
+                  <p class="card-text flex-grow-1">Универсальная pod-система для повседневного использования.</p>
+                </div>
+                <div class="card-footer">
+                  <div class="d-flex justify-content-between align-items-center">
+                    <span class="fw-bold">2 490 ₽</span>
+                    <a href="product.html?vape-pod-01" class="btn btn-primary btn-sm">Подробнее</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col" data-category="pod" data-price="low">
+              <div class="card h-100">
+                <img src="images/vape-pod-02.webp" class="card-img-top" alt="Vape Pod 02">
+                <div class="card-body d-flex flex-column">
+                  <span class="badge bg-secondary mb-2">В наличии</span>
+                  <h5 class="card-title">Vape Pod 02</h5>
+                  <p class="card-text flex-grow-1">Компактная модель для новичков.</p>
+                </div>
+                <div class="card-footer">
+                  <div class="d-flex justify-content-between align-items-center">
+                    <span class="fw-bold">1 990 ₽</span>
+                    <a href="product.html?vape-pod-02" class="btn btn-primary btn-sm">Подробнее</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col" data-category="pod" data-price="mid">
+              <div class="card h-100">
+                <img src="images/vape-pod-03.webp" class="card-img-top" alt="Vape Pod 03">
+                <div class="card-body d-flex flex-column">
+                  <span class="badge bg-secondary mb-2">В наличии</span>
+                  <h5 class="card-title">Vape Pod 03</h5>
+                  <p class="card-text flex-grow-1">Стильный вейп для карманного ношения.</p>
+                </div>
+                <div class="card-footer">
+                  <div class="d-flex justify-content-between align-items-center">
+                    <span class="fw-bold">2 190 ₽</span>
+                    <a href="product.html?vape-pod-03" class="btn btn-primary btn-sm">Подробнее</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col" data-category="pod" data-price="mid">
+              <div class="card h-100">
+                <img src="images/vape-pod-04.webp" class="card-img-top" alt="Vape Pod 04">
+                <div class="card-body d-flex flex-column">
+                  <span class="badge bg-secondary mb-2">В наличии</span>
+                  <h5 class="card-title">Vape Pod 04</h5>
+                  <p class="card-text flex-grow-1">Устройство с регулируемой тягой.</p>
+                </div>
+                <div class="card-footer">
+                  <div class="d-flex justify-content-between align-items-center">
+                    <span class="fw-bold">2 790 ₽</span>
+                    <a href="product.html?vape-pod-04" class="btn btn-primary btn-sm">Подробнее</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col" data-category="pod" data-price="low">
+              <div class="card h-100">
+                <img src="images/vape-pod-05.webp" class="card-img-top" alt="Vape Pod 05">
+                <div class="card-body d-flex flex-column">
+                  <span class="badge bg-secondary mb-2">В наличии</span>
+                  <h5 class="card-title">Vape Pod 05</h5>
+                  <p class="card-text flex-grow-1">Миниатюрный вейп с долгой автономностью.</p>
+                </div>
+                <div class="card-footer">
+                  <div class="d-flex justify-content-between align-items-center">
+                    <span class="fw-bold">2 290 ₽</span>
+                    <a href="product.html?vape-pod-05" class="btn btn-primary btn-sm">Подробнее</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col" data-category="disposable" data-price="mid">
+              <div class="card h-100">
+                <img src="images/vape-pod-cyan-800.webp" class="card-img-top" alt="Vape Pod Cyan 800">
+                <div class="card-body d-flex flex-column">
+                  <span class="badge bg-info text-dark mb-2">Новинка</span>
+                  <h5 class="card-title">Vape Pod Cyan 800</h5>
+                  <p class="card-text flex-grow-1">Яркая pod-система в бирюзовом корпусе.</p>
+                </div>
+                <div class="card-footer">
+                  <div class="d-flex justify-content-between align-items-center">
+                    <span class="fw-bold">2 590 ₽</span>
+                    <a href="product.html?vape-pod-cyan-800" class="btn btn-primary btn-sm">Подробнее</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col" data-category="pod" data-price="mid">
+              <div class="card h-100">
+                <img src="images/vaporesso-xros-nano-green.webp" class="card-img-top" alt="Vaporesso Xros Nano Green">
+                <div class="card-body d-flex flex-column">
+                  <span class="badge bg-pink mb-2">Новинка</span>
+                  <h5 class="card-title">Vaporesso Xros Nano Green</h5>
+                  <p class="card-text flex-grow-1">Компактная под-система с регулируемым обдувом.</p>
+                </div>
+                <div class="card-footer">
+                  <div class="d-flex justify-content-between align-items-center">
+                    <span class="fw-bold">3 490 ₽</span>
+                    <a href="product.html?vaporesso-xros-nano-green" class="btn btn-primary btn-sm">Подробнее</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="alert alert-info text-center mt-4 d-none" id="noResultsAlert">
+            По выбранным фильтрам товаров не найдено.
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer class="py-4 mt-auto">
+    <div class="container text-center">
+      <p class="mb-0 text-muted small">&copy; 2026 Интернет-магазин Podiki. Учебный проект.</p>
+    </div>
+  </footer>
+
+  <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="js/catalog.js"></script>
+</body>
+</html>

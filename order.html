@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="ru" data-bs-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Оформление заявки на покупку в интернет-магазине Podiki.">
+  <title>Оформление заявки — Podiki</title>
+  <link rel="stylesheet" href="vendor/bootstrap/css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/custom.css">
+</head>
+<body>
+  <nav class="navbar navbar-expand-lg sticky-top">
+    <div class="container">
+      <a class="navbar-brand" href="index.html">
+        <span class="brand-mark">P</span>
+        Podiki
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#podikiNav"
+              aria-controls="podikiNav" aria-expanded="false" aria-label="Переключить навигацию">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="podikiNav">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item"><a class="nav-link" href="index.html">Главная</a></li>
+          <li class="nav-item"><a class="nav-link" href="catalog.html">Каталог</a></li>
+          <li class="nav-item"><a class="nav-link" href="contacts.html">Контакты</a></li>
+        </ul>
+        <a href="order.html" class="btn btn-outline-primary active">Оставить заявку</a>
+      </div>
+    </div>
+  </nav>
+
+  <main class="py-4">
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col-12 col-lg-8">
+          <div class="card border-0 shadow-sm">
+            <div class="card-header bg-transparent border-0 py-4">
+              <h2 class="h5 fw-bold mb-0">Оформление заявки</h2>
+            </div>
+            <div class="card-body p-4 p-md-5">
+              <p class="text-muted mb-4">Заполните форму, и мы свяжемся с вами для подтверждения заказа.</p>
+
+              <form id="orderForm" novalidate>
+                <!-- Имя -->
+                <div class="mb-3">
+                  <label for="orderName" class="form-label">Имя <span class="text-danger">*</span></label>
+                  <input type="text" class="form-control" id="orderName" name="name"
+                         placeholder="Иван Иванов" minlength="2" maxlength="50" required>
+                  <div class="invalid-feedback">Пожалуйста, введите ваше имя.</div>
+                </div>
+
+                <!-- E-mail -->
+                <div class="mb-3">
+                  <label for="orderEmail" class="form-label">E-mail <span class="text-danger">*</span></label>
+                  <div class="input-group has-validation">
+                    <span class="input-group-text">@</span>
+                    <input type="email" class="form-control" id="orderEmail" name="email"
+                           placeholder="name@example.ru" required>
+                  </div>
+                  <div class="form-text">Мы никогда не передаём ваши данные третьим лицам.</div>
+                  <div class="invalid-feedback">Введите корректный адрес электронной почты.</div>
+                </div>
+
+                <!-- Телефон -->
+                <div class="mb-3">
+                  <label for="orderPhone" class="form-label">Телефон <span class="text-danger">*</span></label>
+                  <div class="input-group has-validation">
+                    <span class="input-group-text">+7</span>
+                    <input type="tel" class="form-control" id="orderPhone" name="phone"
+                           placeholder="900 000 00 00" pattern="[0-9]{10}" required>
+                  </div>
+                  <div class="invalid-feedback">Введите корректный номер телефона.</div>
+                </div>
+
+                <!-- Товар / тема -->
+                <div class="mb-3">
+                  <label for="orderProduct" class="form-label">Товар или тема заявки <span class="text-danger">*</span></label>
+                  <select class="form-select" id="orderProduct" name="product" required>
+                    <option value="">Выберите вариант</option>
+                    <option value="vaporesso-xros-nano-green">Vaporesso Xros Nano Green — 3 490 ₽</option>
+                    <option value="geekvape-aegis-boost-iii-teal">Geekvape Aegis Boost III Teal — 4 990 ₽</option>
+                    <option value="pafos-8000-exotic">Pafos 8000 Exotic — 990 ₽</option>
+                    <option value="pafos-20000-green-large">Pafos 20000 Green Large — 1 690 ₽</option>
+                    <option value="pafos-20000-pink">Pafos 20000 Pink — 1 690 ₽</option>
+                    <option value="consultation">Консультация по выбору товара</option>
+                    <option value="other">Другой вопрос</option>
+                  </select>
+                  <div class="invalid-feedback">Пожалуйста, выберите товар или тему заявки.</div>
+                </div>
+
+                <!-- Дата связи -->
+                <div class="mb-3">
+                  <label for="orderDate" class="form-label">Желаемая дата связи</label>
+                  <input type="date" class="form-control" id="orderDate" name="contactDate">
+                </div>
+
+                <!-- Комментарий -->
+                <div class="mb-4">
+                  <label for="orderComment" class="form-label">Комментарий</label>
+                  <textarea class="form-control" id="orderComment" name="comment" rows="3"
+                            placeholder="Цвет, комплектация, дополнительная информация"></textarea>
+                </div>
+
+                <!-- Согласие -->
+                <div class="mb-4 form-check">
+                  <input class="form-check-input" type="checkbox" id="orderAgreement" name="agreement" value="true" required>
+                  <label class="form-check-label" for="orderAgreement">
+                    Я согласен на обработку персональных данных <span class="text-danger">*</span>
+                  </label>
+                  <div class="invalid-feedback">Необходимо дать согласие на обработку данных.</div>
+                </div>
+
+                <!-- Кнопка -->
+                <div class="d-grid gap-2">
+                  <button type="submit" class="btn btn-primary btn-lg">Отправить заявку</button>
+                  <button type="button" class="btn btn-outline-secondary" onclick="location.href='catalog.html'">Вернуться в каталог</button>
+                </div>
+              </form>
+
+              <!-- Успех -->
+              <div class="alert alert-success d-none mt-4 shadow-sm" id="orderSuccess">
+                <h5 class="alert-heading fw-bold">Заявка принята!</h5>
+                <p class="mb-0">Спасибо, ваша заявка оформлена. Наш менеджер свяжется с вами в ближайшее время.</p>
+                <hr class="my-3">
+                <p class="mb-0 small text-muted">Вы можете вернуться в <a href="catalog.html" class="alert-link">каталог</a> или на <a href="index.html" class="alert-link">главную</a>.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer class="py-4 mt-auto">
+    <div class="container text-center">
+      <p class="mb-0 text-muted small">&copy; 2026 Интернет-магазин Podiki. Учебный проект.</p>
+    </div>
+  </footer>
+
+  <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="js/order.js"></script>
+</body>
+</html>
